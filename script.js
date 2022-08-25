@@ -4,23 +4,49 @@
 // likeOrDislike([Dislike,Like]) => Like
 // likeOrDislike([Like,Dislike,Dislike]) => Nothing
 
+// TASK 1
+// function likeOrDislike(buttons) {
+//     let state = 'Nothing';
+  
+//     for (let i = 0; i < buttons.length; i++) {
+//       if (buttons[i] === state) {
+//         state = 'Nothing'
+//       } else {
+//         state = buttons[i]
+//       }
+//     }
+  
+//     return state
+// }
 
-function likeOrDislike(buttons) {
-    let state = 'Nothing';
-  
-    for (let i = 0; i < buttons.length; i++) {
-      if (buttons[i] === state) {
-        state = 'Nothing'
-      } else {
-        state = buttons[i]
-      }
+// let Like = "Like"
+// let Dislike = "Dislike"
+
+
+// console.log(likeOrDislike([Like,Dislike,Dislike]));
+
+
+// TASK 2
+
+// TASK: Given a Divisor and a Bound , Find the largest integer N , Such That ,
+// N is divisible by divisor
+
+// N is less than or equal to bound
+
+// N is greater than 0
+
+// MY VARIANT
+function maxMultiple(divisor, bound){
+    while(bound != divisor) {
+        if(bound % divisor === 0) return bound
+        bound--
     }
-  
-    return state
 }
 
-let Like = "Like"
-let Dislike = "Dislike"
+// BEST VARIANT
 
+// function maxMultiple(divisor, bound) {
+//     return Math.floor(bound / divisor) * divisor;
+// }
 
-console.log(likeOrDislike([Like,Dislike,Dislike]));
+console.log(maxMultiple(37,200));
